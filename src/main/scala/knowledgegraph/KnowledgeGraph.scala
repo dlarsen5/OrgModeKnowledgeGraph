@@ -6,13 +6,19 @@ import collection._
 
 object KnowledgeGraph {
   def main (args: Array[String]): Unit = {
-    val orgDir = new File("/Users/davidlarsen/Git/Describe/describe")
+
+    if (args.length == 0) {
+      println("Need to add input directory, exiting...")
+      return 0
+    } else {
+      val orgDir = new File(args(0))
+    }
 
     if (orgDir.exists) {
         val knowledgegraph = new Collection()
         val myfiles = knowledgegraph.processDir(orgDir)
     } else {
-        println("Org dir not valid");
+        println("Org dir not valid")
     }
   }
 }

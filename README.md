@@ -42,4 +42,4 @@ Customization could be done by using the `Collection` object inside of `if __nam
 All other languages were kinda just an exercise for myself but the associated build files are here:
 Scala: `sbt clean package`
 Java: `mvn clean package`
-C++: `make clean && make build`
+C++: `make clean && make release`

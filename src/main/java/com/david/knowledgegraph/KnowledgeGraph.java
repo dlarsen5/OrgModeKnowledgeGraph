@@ -10,7 +10,15 @@ public class KnowledgeGraph
 {
 
   public static void main (String[] args) {
-    String orgDir = "/home/neutron/Rap/lyrics/orglyrics/";
+    String orgDir;
+
+    if (args.length < 1) {
+        println("Need to add input directory, exiting...");
+        return 0;
+    } else {
+        orgDir = args[0];
+    }
+
     File orgPath = new File(orgDir);
 
     if (orgPath.exists()) {

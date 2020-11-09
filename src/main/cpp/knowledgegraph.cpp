@@ -1,9 +1,17 @@
 #include "../include/knowledgegraph.hpp"
 
+#include <iostream>
 
-int main()
+
+int main(int argc, char *argv[])
 {
-  std::string orgDir = "/home/neutron/Rap/lyrics/orglyrics/";
+  std::string orgDir = "";
+  if (argc > 1) {
+    orgDir = argv[1];
+  } else {
+    std::cout << "Need to add /path/to/org/files/ argument";
+    return 0;
+  }
 
   knowledgegraph::Collection collection = knowledgegraph::Collection(orgDir);
 
